@@ -69,7 +69,6 @@ class BlockchainListenerTest {
 
     @Test
     void reconcileNoOpWhenNoTx() {
-        when(bitcoinConfig.getRequiredConfirmations()).thenReturn(1);
         UUID id = UUID.randomUUID();
         Payment pending = payment(id, PaymentStatus.PENDING, "tb1qaddr", 1000L);
         when(blockchainClient.listAddressTransactions("tb1qaddr")).thenReturn(List.of());

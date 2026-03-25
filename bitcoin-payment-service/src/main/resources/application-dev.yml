@@ -1,8 +1,0 @@
-spring:
-  datasource:
-    url: jdbc:postgresql://localhost:5432/bitcoin_payments
-
-logging:
-  level:
-    com.yourcompany.bitcoinpayment: DEBUG
-    org.springframework.jdbc.core: DEBUG
