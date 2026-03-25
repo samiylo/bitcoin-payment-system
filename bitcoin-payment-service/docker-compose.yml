@@ -6,7 +6,7 @@ services:
       POSTGRES_USER: bitcoin
       POSTGRES_PASSWORD: bitcoin
     ports:
-      - "5432:5432"
+      - "4010:4010"
     volumes:
       - pgdata:/var/lib/postgresql/data
     healthcheck:
@@ -22,7 +22,7 @@ services:
         condition: service_healthy
     environment:
       SPRING_PROFILES_ACTIVE: prod
-      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/bitcoin_payments
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:4010/bitcoin_payments
       SPRING_DATASOURCE_USERNAME: bitcoin
       SPRING_DATASOURCE_PASSWORD: bitcoin
     ports:
